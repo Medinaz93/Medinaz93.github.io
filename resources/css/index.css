@@ -393,12 +393,14 @@ ul {
   gap: 5em;
   margin: 0;
 }
+
 header h1 {
   padding-left: 1rem;
   margin-top: 1%;
   min-width: 100%;
   height: 0;
 }
+
 nav ul li {
   display: inline-block;
   font-size: 30px;
@@ -407,13 +409,10 @@ nav ul li {
   border-top-right-radius: 3px;
   margin-bottom: 1em;
 }
-nav ul li a {
-}
+
 nav ul li:hover {
   background-color: white;
   color: rgb(150, 148, 148);
-}
-nav ul li a:hover {
 }
 
 nav ul a {
@@ -439,6 +438,7 @@ main:first-of-type {
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
 main:nth-of-type(2) {
   position: relative;
   top: 7em;
@@ -453,6 +453,7 @@ main:nth-of-type(2) {
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
 main p {
   color: rgb(243, 243, 243);
   padding-top: 1em;
@@ -464,12 +465,13 @@ main img {
 }
 
 /* #endregion Main*/
-footer{
-    font-size: 10pt;
-    position: relative;
-    margin-top: 20em;
-    width: auto;
-    z-index: 10;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+footer {
+  font-size: 10pt;
+  position: relative;
+  margin-top: 20em;
+  width: auto;
+  z-index: 10;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
