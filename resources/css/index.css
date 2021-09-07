@@ -352,50 +352,119 @@ template {
 /* #endregion Normalize */
 
 html {
-  color: white;
+  font-family: "Oxygen", sans-serif;
+  font-size: 22px;
+  color: black;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
 }
 
+/* font-family: 'Noto Serif', serif;
+    font-size: 16px;*/
 body {
-  background-color: cornflowerblue;
+  background-color: hsl(240, 40%, 93%);
 }
 
 h1 {
   font-family: "Courier New", Courier, monospace;
   font-size: 50px;
 }
-
+/* #region NAVBAR */
+/*Nav wrapper */
 header {
+  top: 0;
+  position: fixed;
   display: flex;
-  width: auto;
-  text-align: center;
-  flex-wrap: wrap;
+  width: 100%;
+  flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid white;
+  z-index: 10;
+  background-color: white;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
+
 ul {
+  display: inline-flex;
+  gap: 5em;
   margin: 0;
-  padding: 0;
 }
 header h1 {
+  padding-left: 1rem;
+  margin-top: 1%;
   min-width: 100%;
-  height: 0.5em;
+  height: 0;
 }
 nav ul li {
-  display: inline;
-  font-size: 1.7rem;
-  padding: 0.5rem;
-  color: darkgoldenrod;
-  background-color: rgb(25, 82, 90);
-  border-radius: 3px;
-}
-nav ul li:hover {
-  background-color: darkgoldenrod;
-}
-nav ul li a:hover {
-  font-size: 1.7rem;
-  color: darkgoldenrod;
-  background-color: rgb(29, 83, 90);
+  display: inline-block;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-bottom: 1em;
 }
 nav ul li a {
-  display: inline;
-  color: rgb(241, 188, 53);
+}
+nav ul li:hover {
+  background-color: white;
+  color: rgb(150, 148, 148);
+}
+nav ul li a:hover {
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+/* #endregion NAVBAR */
+
+/* #region Main*/
+
+main:first-of-type {
+  font-family: "Noto Serif", sans-serif;
+  position: relative;
+  top: 7em;
+  margin: 0 12.5%;
+  width: 75%;
+  padding: 1rem 1rem;
+  background-color: hsl(220, 35%, 45%);
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+main:nth-of-type(2) {
+  position: relative;
+  top: 7em;
+  margin: 0 12.5%;
+  width: 75%;
+  padding: 0 1rem;
+  background-color: hsl(220, 35%, 45%);
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;§
+}
+main p {
+  color: rgb(243, 243, 243);
+}
+main img {
+  width: 30%;
+  float: left;
+  padding: 1em 1em 0 0;
+}
+
+/* #endregion Main*/
+footer{
+    font-size: 10pt;
+    position: relative;
+    margin-top: 20em;
+    width: auto;
+    z-index: 10;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
