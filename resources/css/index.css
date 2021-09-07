@@ -430,7 +430,7 @@ main:first-of-type {
   width: 75%;
   height: fit-content;
   padding: 0 1rem;
-  min-height: 581px;
+  min-height: 600px;
 
   background-color: hsl(220, 35%, 45%);
   border-radius: 7px;
@@ -444,7 +444,7 @@ main:nth-of-type(2) {
   top: 7em;
   margin: 0 12.5%;
   height: fit-content;
-  min-height: 581px;
+  min-height: 600px;
   width: 75%;
   padding: 0 1rem;
   background-color: hsl(220, 35%, 45%);
