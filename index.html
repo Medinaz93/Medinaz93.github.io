@@ -3,73 +3,91 @@
 <head>
     <title>My personal website</title>
     <link rel="stylesheet" href="./resources/css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Oxygen:300:400:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Oxygen:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        var initalScrollpos = window.pageYOffset;
+        var myVar
+        var secondScrollPos = 1324;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            console.log(currentScrollPos, initalScrollpos, secondScrollPos);
+
+            if (currentScrollPos != 0 && currentScrollPos < secondScrollPos) {
+                document.getElementById("navbar").style.transition = "opacity 0.4s";
+                document.getElementById("navbar").style.opacity = "0";
+            }
+            if (currentScrollPos == initalScrollpos || currentScrollPos >= secondScrollPos) {
+                document.getElementById("navbar").style.opacity = "1";
+
+            }
+            if (currentScrollPos > 0 && currentScrollPos != initalScrollpos && currentScrollPos < secondScrollPos) {
+                document.getElementById("navbar").style.opacity = "0";
+
+            }
+            if (currentScrollPos >= secondScrollPos + 20) {
+                document.getElementById("navbar").style.opacity = "0";
+
+            }
+            prevScrollpos = currentScrollPos;
+
+        }
+
+        function myFunction() {
+            document.getElementById("navbar").style.opacity = "1";
+            clearTimeout(myVar);
+
+        }
+    </script>
 </head>
 
 <body>
-    <header>
-        <h1>Medinaz</h1>
-        <nav>
-            <ul>
-                <a href="index.html">
-                    <li>Start</li>
-                </a>
-                <a href="index.html">
-                    <li>Projects</li>
-                </a></li>
-                <a href="index.html">
-                    <li>About me</li>
-                </a>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <img src="./resources/css/tanjiro.jpg" alt="">
-        <p>Welcome to my website!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eum atque a perspiciatis eaque delectus
-            magni modi culpa assumenda? Adipisci explicabo cumque magni architecto veniam voluptatum cupiditate. Beatae,
-            quam quisquam?
-            Odit harum ipsa totam veritatis excepturi porro velit consequuntur reprehenderit quisquam id, dolor sed
-            omnis, unde cupiditate quo rem aliquam similique est, sunt saepe adipisci aperiam consectetur. Beatae,
-            possimus officia!
-            Ullam qui veniam maxime itaque dolorum! Cumque aut assumenda alias praesentium placeat a vitae
-            necessitatibus porro at harum accusantium fugit minus, numquam odit laudantium vel aliquid rerum itaque.
-            Earum, dolore.
-            Dolor accusantium quisquam molestias, aliquid quasi ipsam vel officiis assumenda quas iure! Dolorem
-            consequatur, ullam tenetur perferendis repudiandae rem consectetur nulla temporibus non quae ea praesentium,
-            delectus velit sint in.
-            At dolorum autem pariatur itaque deleniti ratione alias, minima nihil, velit tenetur natus dicta cumque
-            atque voluptas dignissimos iure ipsam consectetur hic quaerat. Odit ipsa illo earum, autem quam laudantium!
-            tio tempora praesentium repudiandae explicabo velit nihil blanditiis iure soluta ex qui fugiat ut facilis
-            atque voluptatum quibusdam numquam voluptates magnam. Illo quo qui hic?
-        </p>
-    </main>
-    <main>
-        <img src="./resources/css/tanjiro.jpg" alt="">
-        <p>
-            Welcome to my website!
-            ti commodi, pariatur, voluptatibus quis consequuntur facilis veritatis ex! Architecto, consequuntur nisi
-            placeat impedit consequatur exercitationem ea, adipisci soluta autem similique debitis quaerat. Dolorum!
-            Ullam expedita quidem, at veniam optio tempora praesentium repudiandae explicabo velit nihil blanditiis iure
-            soluta ex qui fugiat ut facilis atque voluptatum quibusdam numquam voluptates magnam. Illo quo qui hic?
-        </p>
-    </main>
-    <footer>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet impedit laboriosam voluptate quae
-        doloribus iure corrupti accusantium maxime aut. Veniam cupiditate expedita cumque beatae blanditiis, repellendus
-        quam excepturi porro?
-        Earum quod voluptatibus similique corporis sequi nobis officia distinctio impedit deserunt et repudiandae,
-        blanditiis odit, sed mollitia qui, eos eum repellat? Maxime quisquam, eos inventore debitis quam similique sed
-        veritatis.
-        Enim at nisi totam beatae mollitia doloremque illum accusantium atque dolore in ad consequatur ducimus rem
-        architecto deleniti tempore officiis inventore dolorem, obcaecati praesentium quibusdam. Totam quas eaque illo
-        dicta!
-        Tempora expedita aliquam inventore praesentium optio ipsa quaerat dolor consequatur recusandae, veniam quas
-        sequi perferendis eaque, debitis cum sapiente necessitatibus accusantium dignissimos, obcaecati voluptate
-        molestiae excepturi cumque enim. Suscipit, consequatur?
-        Illo perferendis vitae non maiores impedit laboriosam cupiditate eius nostrum debitis? Ad magni, minus iusto
-        neque repellat hic! Quia, rem sapiente aliquid earum dicta eius laborum repellat itaque vel deleniti!
-    </footer>
+    <div class="hero-background" id="start">
+        <header id="navbar">
+            <h1>Portfolio - Medinaz</h1>
+            <nav>
+                <ul>
+                    <a href="#start">
+                        <li>Start</li>
+                    </a>
+                    <a href="#projects">
+                        <li>Projects</li>
+                    </a>
+                    </li>
+                    <a href="index.html">
+                        <li>About me</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <div class="main-wrapper">
+            <img class="profile-img" src="./resources/css/tanjiro.jpg" alt="">
+            <main>
+                <h2>Hi! <br> I'm a Front-end Developer</h2>
+
+                <div class="main-text-wrapper">
+                    <p>
+                        I specialize in HTML, CSS and have some javascript knowledge
+                    </p>
+                </div>
+                </p>
+        </div>
+        </main>
+        <div class="cta-wrapper">
+            <a href="#projects">Take a Tour!</button>
+        </div>
+
+    </div>
+
+
+    <main></main>
+
+    <div id="projects">asd</div>
+
 </body>
 
 </html>
