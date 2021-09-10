@@ -12,10 +12,11 @@
         var prevScrollpos = window.pageYOffset;
         var initalScrollpos = window.pageYOffset;
         var myVar
-        var secondScrollPos = 1324;
+        var secondScrollPos = window.innerHeight + 1;
+        console.log(window.innerHeight)
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-            console.log(currentScrollPos, initalScrollpos, secondScrollPos);
+            console.log(currentScrollPos, secondScrollPos);
 
             if (currentScrollPos != 0 && currentScrollPos < secondScrollPos) {
                 document.getElementById("navbar").style.transition = "opacity 0.4s";
